@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #1387c1;
+  --color-secondary: #7c868c;
+}
+
+:root {
+  --background: #f8fafc;
+  --surface: rgba(248, 250, 252, 0.9);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+
+  --text: #1f2937;
+
+  --border: #e2e8f0;
+}
+
+html.dark {
+  --background: #101a20;
+  --surface: rgba(16, 26, 32, 0.9);
+
+  --text-primary: #ffffff;
+  --text-secondary: #99a1af;
+
+  --text: #fbfafa;
+
+  --border: #27323a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Ubuntu", sans-serif;
+}
