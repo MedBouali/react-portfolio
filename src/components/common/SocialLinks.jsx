@@ -1,20 +1,26 @@
 import { SOCIAL_LINKS } from "@/constants/socialLinks"
 
-const baseClass =
-    "h-4 w-4 transition duration-300"
+const baseStyles =
+    "transition duration-300"
 
-const primaryClass =
-    "text-white hover:text-primary"
+const primaryStyles =
+    "text-secondary hover:text-primary"
 
-const secondaryClass =
+const secondaryStyles =
     "text-secondary hover:text-(--text)"
 
 const colors = {
-    primary: primaryClass,
-    secondary: secondaryClass,
+    primary: primaryStyles,
+    secondary: secondaryStyles,
 }
 
-function SocialLinks({ color = "primary" }) {
+const sizes = {
+    sm: "h-3 w-3",
+    base: "h-4 w-4",
+    lg: "h-5 w-5",
+}
+
+function SocialLinks({ color = "primary", size = "base" }) {
     return (
         <div className="flex items-center gap-4">
             {SOCIAL_LINKS.map((link) => {
@@ -29,7 +35,7 @@ function SocialLinks({ color = "primary" }) {
                         aria-label={link.ariaLabel}
                         title={link.title}
                     >
-                        <Icon className={`${baseClass} ${colors[color]}`} />
+                        <Icon className={`${baseStyles} ${colors[color]} ${sizes[size]}`} />
                     </a>
                 )
             })}

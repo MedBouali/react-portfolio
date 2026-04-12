@@ -1,18 +1,10 @@
-import { Container, SectionTitle } from "@/components/ui"
+import { Container } from "@/components/ui"
+import { Hero } from "@/features/home"
 
 function Home() {
     return (
-        <Container className="py-16">
-            <section className="rounded-3xl">
-                
-            </section>
-
-            <section className="py-16">
-                <SectionTitle
-                    eyebrow="Skills"
-                    title="Tech Stack"
-                />
-            </section>
+        <Container>
+            <Hero />
         </Container>
     )
 }

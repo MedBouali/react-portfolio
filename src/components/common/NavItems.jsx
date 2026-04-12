@@ -1,32 +1,19 @@
 import { motion } from "framer-motion"
 import { NavLink } from "react-router-dom"
 import { NAV_LINKS } from "@/constants/navigation"
+import { staggerContainer, staggerItem } from "@/lib/animations"
 
-const baseLinkClass =
+const baseLinkStyles =
     "relative pb-1 transition duration-300"
 
-const underlineClass =
+const underlineStyles =
     "after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300"
 
-const linkInactiveClass =
-    `${baseLinkClass} hover:text-primary after:w-0 hover:after:w-1/2 ${underlineClass}`
+const linkInactiveStyles =
+    `${baseLinkStyles} hover:text-primary after:w-0 hover:after:w-1/2 ${underlineStyles}`
 
-const linkActiveClass =
-    `${baseLinkClass} text-primary after:w-1/2 ${underlineClass}`
-
-const containerVariants = {
-    hidden: {},
-    visible: {
-        transition: {
-            staggerChildren: 0.08,
-        },
-    },
-}
-
-const itemVariants = {
-    hidden: { opacity: 0, y: -8 },
-    visible: { opacity: 1, y: 0 },
-}
+const linkActiveStyles =
+    `${baseLinkStyles} text-primary after:w-1/2 ${underlineStyles}`
 
 function NavItems({
     onClick,
@@ -35,14 +22,14 @@ function NavItems({
     return (
         <motion.div
             className="flex flex-col md:flex-row items-center gap-4 md:gap-8"
-            variants={containerVariants}
+            variants={staggerContainer(0.08)}
             initial="hidden"
             animate="visible"
         >
             {NAV_LINKS.map((link) => (
                 <motion.div
                     key={link.path}
-                    variants={itemVariants}
+                    variants={staggerItem(-8)}
                 >
                     <NavLink
                         to={link.path}
@@ -53,8 +40,8 @@ function NavItems({
                                     ? "text-primary"
                                     : "hover:text-primary"
                                 : isActive
-                                    ? linkActiveClass
-                                    : linkInactiveClass
+                                    ? linkActiveStyles
+                                    : linkInactiveStyles
                         }
                     >
                         {link.name}

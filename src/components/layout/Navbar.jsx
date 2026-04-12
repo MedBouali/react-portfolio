@@ -13,7 +13,7 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
     const [isSticky, setIsSticky] = useState(false)
 
-    const navClassName = `hidden md:block sticky top-0 z-40 py-1 bg-(--surface) border-b ${isSticky ? "border-(--border)" : "border-transparent"}`
+    const navStyles = `hidden md:block sticky top-0 z-40 bg-(--surface) border-b ${isSticky ? "border-(--border)" : "border-transparent"}`
 
     useEffect(() => {
         const handleScroll = () => {
@@ -28,7 +28,7 @@ function Navbar() {
     return (
         <>
             <header className="top-0 z-50 bg-(--background)">
-                <div className="mx-auto grid max-w-7xl grid-cols-3 items-center px-6 pt-4">
+                <div className="mx-auto grid h-14 max-w-7xl grid-cols-3 items-center px-6">
                     <div className="justify-self-start">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
@@ -54,12 +54,11 @@ function Navbar() {
 
                         <ThemeToggle />
                     </div>
-
                 </div>
             </header>
 
-            <div className={navClassName}>
-                <nav className="flex items-center justify-center gap-8 text-[15px] py-4 transition-all">
+            <div className={navStyles}>
+                <nav className="flex items-center justify-center gap-8 text-[15px] h-16 transition-all">
                     <NavItems />
                 </nav>
             </div>
