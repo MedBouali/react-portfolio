@@ -1,12 +1,9 @@
-import Home from "@/pages/Home"
-import About from "@/pages/About"
-import Projects from "@/pages/Projects"
-import Resume from "@/pages/Resume"
-import Contact from "@/pages/Contact"
+import { Home, About, Projects, Resume, Contact, Skills } from "@/pages"
 
 export const routes = [
     { path: "/", element: <Home /> },
     { path: "/about", element: <About /> },
+    { path: "/skills", element: <Skills /> },
     { path: "/projects", element: <Projects /> },
     { path: "/resume", element: <Resume /> },
     { path: "/contact", element: <Contact /> },

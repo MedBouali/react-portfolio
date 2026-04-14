@@ -5,7 +5,7 @@ function SectionTitle({ eyebrow, title }) {
     return (
         <motion.div
             {...fadeUp(0, 20, 0.6)}
-            className="mb-8"
+            className="flex flex-col items-center mb-8"
         >
             {eyebrow && (
                 <motion.p
@@ -17,7 +17,7 @@ function SectionTitle({ eyebrow, title }) {
             )}
             <motion.h2
                 {...fadeUp(0.2, 15, 0.5)}
-                className="text-(--text-primary) text-3xl font-bold tracking-tight"
+                className="text-(--text-primary) text-4xl font-bold tracking-tight"
             >
                 {title}
             </motion.h2>

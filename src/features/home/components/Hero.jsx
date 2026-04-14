@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { fadeIn } from "@/lib/animations"
 import { SocialLinks } from "@/components/common"
-import { HeroDescription } from "@/features/home"
+import { HeroDescription, TechStackBackground } from "@/features/home"
 import { Button } from "@/components/ui"
 
 function Hero() {
@@ -9,7 +9,11 @@ function Hero() {
     const description = "I'm Mohammed Bouali, a junior web developer passionate about building modern, responsive web applications. I work primarily with React, Next.js, and Tailwind CSS, and I enjoy turning ideas into clean, interactive interfaces while continuously improving my skills."
 
     return (
-        <div className={`${heroHeight} flex flex-col items-center justify-center space-y-7`}>
+        <div className={`${heroHeight} relative flex flex-col items-center justify-center space-y-7 overflow-hidden`}>
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none blur-[0.3px]">
+                <TechStackBackground />
+            </div>
+
             <motion.h1
                 {...fadeIn(0.1)}
                 className="text-3xl md:text-4xl font-bold text-center"

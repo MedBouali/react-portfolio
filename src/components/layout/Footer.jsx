@@ -5,7 +5,7 @@ function Footer() {
         <footer className="border-t border-(--border) bg-(--background)">
             <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-center md:text-left">
-                    <h2 className="text-(--text-primary) text-sm font-medium">
+                    <h2 className="text-(--text-primary) text-sm">
                         © {new Date().getFullYear()} Mohammed Bouali
                     </h2>
                     <p className="text-(--text-secondary) text-xs mt-1">
