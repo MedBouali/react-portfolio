@@ -1,4 +1,5 @@
 import { Container, SectionTitle } from "@/components/ui"
+import { AboutContent } from "@/features/about"
 
 function About() {
     return (
@@ -7,9 +8,10 @@ function About() {
                 eyebrow="About"
                 title="Who I Am"
             />
-            <div className="rounded-2xl p-6">
-                About
-            </div>
+            
+            <section className="p-6">
+                <AboutContent />
+            </section>
         </Container>
     )
 }
