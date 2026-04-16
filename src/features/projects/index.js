@@ -1,0 +1,5 @@
+export { PROJECTS_DATA } from "./data/projectsData"
+export { default as useProjects } from "./hooks/useProjects"
+export { default as ProjectsList } from "./components/ProjectsList"
+export { default as ProjectCard } from "./components/ProjectCard"
+export { default as ProjectLinks } from "./components/ProjectLinks"
