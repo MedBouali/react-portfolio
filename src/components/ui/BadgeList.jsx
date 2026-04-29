@@ -4,7 +4,7 @@ function BadgeList({ items }) {
             {items.map((item) => (
                 <span
                     key={item}
-                    className="text-[11px] px-2 py-0.5 bg-primary/90 text-gray-100 rounded-full"
+                    className="text-[11px] px-2 py-0.5 bg-primary/90 text-gray-100 rounded-md"
                 >
                     {item}
                 </span>

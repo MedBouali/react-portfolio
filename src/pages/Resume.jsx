@@ -1,4 +1,5 @@
 import { Container, SectionTitle } from "@/components/ui"
+import { ResumeContent } from "@/features/resume"
 
 function Resume() {
     return (
@@ -7,8 +8,9 @@ function Resume() {
                 eyebrow="Resume"
                 title="Overview"
             />
-            <div className="rounded-2xl p-6">
-                Resume
+
+            <div className="p-6 ">
+                <ResumeContent />
             </div>
         </Container>
     )
