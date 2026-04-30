@@ -7,7 +7,7 @@ import {
 export const SOCIAL_LINKS = [
     {
         icon: BiLogoGmail,
-        href: "https://mail.google.com/mail/?view=cm&fs=1&to=boualimed23@gmail.com",
+        href: "mailto:boualimed23@gmail.com",
         ariaLabel: "Email",
         title: "Email",
     },

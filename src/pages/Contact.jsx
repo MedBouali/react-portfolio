@@ -1,4 +1,5 @@
 import { Container, SectionTitle } from "@/components/ui"
+import { ContactContent } from "@/features/contact"
 
 function Contact() {
     return (
@@ -7,8 +8,8 @@ function Contact() {
                 eyebrow="Contact"
                 title="Get in touch"
             />
-            <div className="rounded-2xl p-6">
-                Contact
+            <div className="p-6">
+                <ContactContent />
             </div>
         </Container>
     )

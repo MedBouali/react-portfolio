@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 const baseStyles =
-    "inline-flex items-center justify-center rounded-lg px-4 py-2 text-[13px] font-medium text-center transition"
+    "inline-flex items-center justify-center rounded-lg px-4 py-2 text-[13px] font-medium text-center transition cursor-pointer"
 
 const variants = {
     primary:
