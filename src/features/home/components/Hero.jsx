@@ -6,7 +6,7 @@ import { Button } from "@/components/ui"
 
 function Hero() {
     const heroHeight = "min-h-[calc(100vh-3.5rem)] md:min-h-[calc(100vh-7.5rem)]"
-    const description = "I'm Mohammed Bouali, a junior web developer passionate about building modern, responsive web applications. I work primarily with React, Next.js, and Tailwind CSS, and I enjoy turning ideas into clean, interactive interfaces while continuously improving my skills."
+    const description = "I'm Mohammed Bouali, a junior frontend developer passionate about building modern, responsive web applications. I work primarily with React, Next.js, and Tailwind CSS, and I enjoy turning ideas into clean, interactive interfaces while continuously improving my skills."
 
     return (
         <div className={`${heroHeight} relative flex flex-col items-center justify-center space-y-7 overflow-hidden`}>
@@ -25,7 +25,7 @@ function Hero() {
                 {...fadeIn(0.2)}
                 className="text-md md:text-xl font-code text-primary font-medium"
             >
-                Junior Web Developer
+                Junior Frontend Developer
             </motion.h2>
 
             <HeroDescription text={description} />

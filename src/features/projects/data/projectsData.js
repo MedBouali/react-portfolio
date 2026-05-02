@@ -10,7 +10,7 @@ export const PROJECTS_DATA = [
         id: 1,
         title: "Portfolio Website",
         description: "Personal portfolio built with React and Tailwind CSS.",
-        tech: ["React", "Vite", "Tailwind CSS", "JavaScript", "Framer Motion"],
+        tech: ["React", "Vite", "Tailwind CSS", "JavaScript", "Framer Motion", "EmailJS"],
         image: portfolioImg,
         github: "https://github.com/MedBouali/react-portfolio",
         demo: "https://mohammedbouali.vercel.app/",
